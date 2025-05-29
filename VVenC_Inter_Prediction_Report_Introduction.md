@@ -1,7 +1,0 @@
-# VVenC Inter Prediction: Algorithms and Mechanisms
-
-## 1. Introduction
-
-Inter-frame prediction, or simply inter prediction, is a cornerstone of modern video compression standards, including H.266/VVC. Its primary role is to exploit temporal redundancy between successive frames in a video sequence. Instead of encoding each frame independently (as in intra prediction), inter prediction allows blocks of pixels in the current frame to be predicted from already coded and reconstructed blocks in previously coded frames (reference frames). This is achieved by estimating motion (Motion Estimation - ME) to find the best matching block in a reference frame and then encoding the motion vector (MV) and the residual (the difference between the original block and the predicted block). By encoding only the motion and residual, significant compression efficiency is achieved, especially in sequences with moderate to high motion.
-
-The VVenC encoder implements a comprehensive and highly sophisticated suite of inter prediction tools as specified by the VVC standard. These tools range from traditional block-based translational motion models to more complex affine and geometric partitioning modes, along with advanced techniques for motion vector prediction and refinement. This report aims to provide a detailed explanation of these inter prediction mechanisms within VVenC, targeting software engineers familiar with general video coding concepts. We will explore the key algorithms, data structures, and the overall workflow involved in making inter prediction decisions.
